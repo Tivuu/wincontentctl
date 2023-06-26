@@ -67,7 +67,7 @@ class DetectionTestingInfrastructureContainer(DetectionTestingInfrastructure):
         mounts = [
             docker.types.Mount(
                 source=str(LOCAL_APP_DIR.absolute()),
-                target=str(CONTAINER_APP_DIR.absolute()),
+                target=str(CONTAINER_APP_DIR),
                 type="bind",
                 read_only=True,
             )

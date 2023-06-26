@@ -27,7 +27,7 @@ ALWAYS_PULL_REPO = False
 PREVIOUSLY_ALLOCATED_PORTS: set[int] = set()
 
 LOCAL_APP_DIR = pathlib.Path("apps")
-CONTAINER_APP_DIR = pathlib.Path("/tmp/apps")
+CONTAINER_APP_DIR = pathlib.PurePosixPath("/tmp/apps")
 
 
 def getTestConfigFromYMLFile(path: pathlib.Path):
